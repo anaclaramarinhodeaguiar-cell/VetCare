@@ -1,0 +1,187 @@
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+    /* Define uma máscara clara sobre a imagem para dar contraste ao texto */
+    background-image: linear-gradient(rgba(243, 247, 245, 0.85), rgba(243, 247, 245, 0.85)), 
+                     url('https://i.postimg.cc/HWt3xmTN/Chat-GPT-Image-1-de-jul-de-2026-16-16-26.png');
+    
+    background-size: cover;          /* Faz a imagem cobrir a tela inteira */
+    background-position: center;     /* Centraliza o desenho */
+    background-repeat: no-repeat;    /* Impede que o padrão se repita */
+    background-attachment: fixed;    /* Deixa o fundo fixo ao rolar a página */
+    background-color: #f3f7f5;       /* Fundo reserva caso a imagem falhe */
+    
+    color: #2c3e35;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- BARRA DE NAVEGAÇÃO --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(255, 255, 255, 0.95); /* Leve transparência no menu */
+    box-shadow: 0 4px 15px rgba(160, 180, 170, 0.1);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e35;
+}
+
+.logo span {
+    color: #3caea3; 
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #7a8b82;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover, .menu a.active {
+    color: #3caea3;
+}
+
+.menu .btn-login {
+    border: 1.5px solid #3caea3;
+    color: #3caea3;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.menu .btn-login:hover {
+    background-color: #3caea3;
+    color: #ffffff;
+}
+
+/* --- SEÇÃO HERO --- */
+.hero-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 40px 8%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo sutil atrás do texto */
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px); /* Suaviza o fundo atrás do texto */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #2c3e35;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #4a5c52;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Botões de Ação */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    background-color: #3caea3;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(60, 174, 163, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2f948a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4a5c52;
+    border: 1.5px solid #e0e6e3;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    border-color: #7a8b82;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 968px) {
+    .hero-content {
+        justify-content: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: none; 
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
