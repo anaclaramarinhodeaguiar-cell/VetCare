@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sistema Voluntários</title>
+    <link rel="stylesheet" href="cadastro_pi.css">
+</head>
+<body>
+
+<div class="cadastro-card">
+    <h2>Criar Conta</h2>
+    <p class="subtitle">Junte-se à nossa comunidade de voluntários</p>
+    
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Ana Souza">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="ana.souza@email.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required placeholder="No mínimo 8 caracteres">
+        </div>
+
+        <div class="form-group">
+            <label for="confirmar-senha">Confirmar Senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="••••••••">
+        </div>
+        
+        <div class="form-options">
+            <label class="terms">
+                <input type="checkbox" name="terms" required> Eu aceito os <a href="#">Termos e Condições</a>
+            </label>
+        </div>
+        
+        <button type="submit" class="btn-submit">Cadastrar</button>
+    </form>
+
+    <div class="card-footer">
+        <p>Já tem uma conta? <a href="login_pi.html">Faça login</a></p>
+    </div>
+</div>
+
+</body>
+</html>

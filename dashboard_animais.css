@@ -9,7 +9,7 @@ font-family:Segoe UI;
 
 body{
 
-background:#F4F5FB;
+background:#E9F7ED;
 display:flex;
 
 }
@@ -19,7 +19,7 @@ display:flex;
 width:250px;
 height:100vh;
 
-background:#7C5CFF;
+background:#2E7D52;
 
 color:white;
 
@@ -48,17 +48,17 @@ margin-bottom:10px;
 }
 
 .sidebar-link{
-	display:block;
-	padding:18px;
-	border-radius:12px;
-	color:white;
-	text-decoration:none;
-	transition:.3s;
+    display:block;
+    padding:18px;
+    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
 }
 
 .sidebar-link:hover,
 .sidebar-link:focus{
-	background:#9E86FF;
+    background:#4BA478;
 }
 
 .main{
@@ -88,13 +88,13 @@ background-size:cover;
 
 background-position:center;
 
-background-color:#90EE90;
+background-color:#C8F0C8;
 
 border-radius:25px;
 
 overflow:hidden;
 
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
 
 }
 
@@ -107,7 +107,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 .consultas-sidebar h3{
     margin-bottom:15px;
-    color:#7C5CFF;
+    color:#2E7D52;
 }
 
 .consulta-item{
@@ -146,25 +146,25 @@ box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .consulta-item.agendada .status-badge{
-    background:#E8F0FF;
-    color:#2B6CEB;
+    background:#DFF6DF;
+    color:#0000ff;
 }
 
 .consulta-item.andamento .status-badge{
-    background:#FFF4D6;
-    color:#C77A00;
+    background:#DFF6DF;
+    color: #ffc222;
 }
 
 .consulta-item.finalizada .status-badge{
-    background:#E8F8EE;
-    color:#2E8B57;
+    background:#D7EFD7;
+    color:#29663F;
 }
 
 .overlay{
 
 height:100%;
 
-background:rgba(0,0,0,.25);
+background:rgba(46,125,82,.18);
 
 padding:40px;
 
@@ -178,7 +178,7 @@ justify-content:flex-end;
 
 }
 
-.overlay button{
+.overlay-btn{
 
 width:180px;
 
@@ -188,11 +188,18 @@ border:none;
 
 border-radius:30px;
 
-background:white;
+background:#E8F9EA;
+
+color:#2E7D52;
 
 margin-top:15px;
 
 cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-weight:600;
 
 }
 
@@ -246,7 +253,7 @@ font-size:32px;
 
 font-weight:bold;
 
-color:#7C5CFF;
+color:#2E7D52;
 
 }
 
@@ -272,7 +279,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .login-btn{
-    background:#7C5CFF;
+    background:#3B7B57;
     color:white;
     border:none;
     padding:12px 28px;
@@ -280,16 +287,16 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
     font-size:16px;
     cursor:pointer;
     transition:.3s;
-    box-shadow:0 5px 15px rgba(124,92,255,.35);
+    box-shadow:0 5px 15px rgba(59,123,87,.3);
 }
 
 .login-btn:hover{
-    background:#6A4BFF;
+    background:#316A48;
     transform:translateY(-2px);
 }
 
 .back-link{
-    color:#7C5CFF;
+    color:#2E7D52;
     text-decoration:none;
     font-weight:600;
 }
@@ -306,11 +313,78 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .page-card h3{
-    color:#7C5CFF;
+    color:#2E7D52;
     margin-bottom:12px;
 }
 
 .page-card p{
     color:#666;
     line-height:1.6;
+}
+
+.animal-form{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+    margin-bottom:24px;
+}
+
+.animal-form input{
+    padding:12px 14px;
+    border:1px solid #d7e9de;
+    border-radius:10px;
+    outline:none;
+}
+
+.animal-form input:focus{
+    border-color:#2E7D52;
+    box-shadow:0 0 0 2px rgba(46,125,82,.12);
+}
+
+.animal-form button{
+    grid-column:span 2;
+    width:fit-content;
+    padding:12px 20px;
+    border:none;
+    border-radius:999px;
+    background:#2E7D52;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.animal-form button:hover{
+    background:#256845;
+}
+
+.animals-title{
+    margin:8px 0 12px;
+    color:#2E7D52;
+}
+
+.animal-list{
+    display:grid;
+    gap:12px;
+}
+
+.animal-item{
+    background:#f7fcf8;
+    border:1px solid #dcefe2;
+    border-radius:14px;
+    padding:14px 16px;
+}
+
+.animal-item strong{
+    display:block;
+    color:#2E7D52;
+    margin-bottom:4px;
+}
+
+.animal-item p{
+    margin:0;
+}
+
+.empty-state{
+    color:#6b7b72;
+    font-style:italic;
 }

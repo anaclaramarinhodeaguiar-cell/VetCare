@@ -9,7 +9,7 @@
 body {
     /* Define uma máscara clara sobre a imagem para dar contraste ao texto */
     background-image: linear-gradient(rgba(243, 247, 245, 0.85), rgba(243, 247, 245, 0.85)), 
-                     url('https://i.postimg.cc/HWt3xmTN/Chat-GPT-Image-1-de-jul-de-2026-16-16-26.png');
+                     url("https://i.postimg.cc/XJNfLDQj/Chat-GPT-Image-13-de-jul-de-2026-17-15-36.png");
     
     background-size: cover;          /* Faz a imagem cobrir a tela inteira */
     background-position: center;     /* Centraliza o desenho */

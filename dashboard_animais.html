@@ -11,7 +11,7 @@
     <div class="sidebar">
         <h2>VetCare</h2>
         <ul>
-            
+           
 <li><a class="sidebar-link" href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
 
 <li><a class="sidebar-link" href="dashboard_animais.html"><i class="fa-solid fa-paw"></i> Animais</a></li>
@@ -33,9 +33,74 @@
         </div>
 
         <div class="page-card">
-            <h3>Cadastro de animais</h3>
-            <p>Esta tela pode receber a listagem completa, detalhes ou formulário de cadastro dos animais do sistema.</p>
+            <h3>Adicionar animal</h3>
+            <form id="animal-form" class="animal-form">
+                <input type="text" id="animal-nome" placeholder="Nome do animal" required>
+                <input type="text" id="animal-especie" placeholder="Espécie" required>
+                <input type="number" id="animal-idade" placeholder="Idade" min="0" required>
+                <input type="text" id="animal-raca" placeholder="Raça">
+                <button type="submit">Salvar animal</button>
+            </form>
+
+            <h3 class="animals-title">Animais cadastrados</h3>
+            <div id="lista-animais" class="animal-list"></div>
         </div>
     </div>
+
+    <script>
+        const form = document.getElementById('animal-form');
+        const listaAnimais = document.getElementById('lista-animais');
+        const storageKey = 'vetcare.animais';
+
+        function carregarAnimais() {
+            const dados = localStorage.getItem(storageKey);
+            return dados ? JSON.parse(dados) : [];
+        }
+
+        function salvarAnimais(animais) {
+            localStorage.setItem(storageKey, JSON.stringify(animais));
+        }
+
+        function renderizarAnimais() {
+            const animais = carregarAnimais();
+
+            if (animais.length === 0) {
+                listaAnimais.innerHTML = '<p class="empty-state">Nenhum animal cadastrado ainda.</p>';
+                return;
+            }
+
+            listaAnimais.innerHTML = animais.map((animal) => `
+                <div class="animal-item">
+                    <div>
+                        <strong>${animal.nome}</strong>
+                        <p>${animal.especie} • ${animal.raca || 'Sem raça'} • ${animal.idade} ano(s)</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const animal = {
+                nome: document.getElementById('animal-nome').value.trim(),
+                especie: document.getElementById('animal-especie').value.trim(),
+                idade: document.getElementById('animal-idade').value.trim(),
+                raca: document.getElementById('animal-raca').value.trim()
+            };
+
+            if (!animal.nome || !animal.especie || !animal.idade) {
+                return;
+            }
+
+            const animais = carregarAnimais();
+            animais.push(animal);
+            salvarAnimais(animais);
+            renderizarAnimais();
+            form.reset();
+        });
+
+        renderizarAnimais();
+    </script>
 </body>
 </html>
