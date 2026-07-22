@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistema Voluntários</title>
     <link rel="stylesheet" href="login_pi.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/12/12638.png" type="image.png">
 </head>
 <body>
 
@@ -12,7 +13,7 @@
     <h2>Bem-vindo de volta</h2>
     <p class="subtitle">Acesse o sistema de voluntários</p>
     
-    <form action="#" method="POST">
+    <form id="loginForm" action="#" method="POST">
         <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required placeholder="ana.souza@email.com">
@@ -27,7 +28,7 @@
             <label class="remember-me">
                 <input type="checkbox" name="remember"> Lembrar-me
             </label>
-            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            <a href="/app/login/esqueceu_a_senha.html" class="forgot-password">Esqueceu a senha?</a>
         </div>
         
         <button type="submit" class="btn-submit">Entrar</button>
@@ -35,9 +36,10 @@
 
     <div class="card-footer">
         <p>Não tem uma conta? <a href="/app/cadastro/cadastro_pi.html">Cadastre-se</a></p>
-        <p><a href="dashboard_animais.html"></a></p>
+        
     </div>
 </div>
 
+<script src="bancotemporario.js"></script>
 </body>
 </html>
