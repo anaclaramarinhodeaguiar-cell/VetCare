@@ -24,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
   const loginValido = fazerLogin(email, senha);
 
   if (loginValido) {
-    window.location.href = "../dashboard.html";
+    window.location.href = "../../dashboard.html";
   } else {
     alert("E-mail ou senha incorretos.");
   }
