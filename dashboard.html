@@ -9,146 +9,157 @@
 
     <link rel="stylesheet" href="animais.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/12/12638.png" type="image.png">
-    
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="sidebar">
+    <div class="sidebar">
 
-<h2>VetCare</h2>
+        <h2>VetCare</h2>
 
-<ul>
+        <ul>
 
-    <li><a class="sidebar-link" href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a class="sidebar-link" href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
 
-    <li><a class="sidebar-link" href="animais.html"><i class="fa-solid fa-paw"></i> Animais</a></li>
+            <li><a class="sidebar-link" href="animais.html"><i class="fa-solid fa-paw"></i> Animais</a></li>
 
-    <li><a class="sidebar-link" href="/app/agenda/agenda.html"><i class="fa-solid fa-calendar"></i> Agenda</a></li>
+            <li><a class="sidebar-link" href="/app/agenda/agenda.html"><i class="fa-solid fa-calendar"></i> Agenda</a>
+            </li>
 
-    <li><a class="sidebar-link" href="voluntarios.html"><i class="fa-solid fa-users"></i> Voluntários</a></li>
+            <li><a class="sidebar-link" href="voluntarios.html"><i class="fa-solid fa-users"></i> Voluntários</a></li>
 
-    <li><a class="sidebar-link" href="doacoes.html"><i class="fa-solid fa-heart"></i> Doações</a></li>
+            <li><a class="sidebar-link" href="doacoes.html"><i class="fa-solid fa-heart"></i> Doações</a></li>
 
-    <li><a class="sidebar-link" href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a></li>
+            <li><a class="sidebar-link" href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            </li>
 
-</ul>
+        </ul>
 
-</div>
-
-<div class="main">
-    <div class="topbar">
-    <h2>Dashboard</h2>
-
-    <button class="sair-btn">
-        <i class="fa-solid fa-sign-out-alt"></i>
-        Sair
-    </button>
-</div>
-
-<div class="dashboard-layout">
-<div class="banner">
-
-<div class="overlay">
-
-<h1>Sistema Veterinário</h1>
-
-<button>Adicionar Animal</button>
-
-<button>Agenda</button>
-
-</div>
-
-</div>
-
-<div class="cards">
-
-<a class="card-link" href="dashboard_animais.html">
-    <div class="card">
-        <h3>Animais</h3>
-        <span>214</span>
     </div>
-</a>
 
-<a class="card-link" href="agenda.html">
-    <div class="card">
-        <h3>Adoções</h3>
-        <span>35</span>
-    </div>
-</a>
+    <div class="main">
+        <div class="topbar">
+            <h2>Dashboard</h2>
 
-<a class="card-link" href="dashboard_animais.html">
-    <div class="card">
-        <h3>Consultas</h3>
-        <span>12</span>
-    </div>
-</a>
-
-<a class="card-link" href="doacoes.html">
-    <div class="card">
-        <h3>Doações</h3>
-        <span>R$ 8.420</span>
-    </div>
-</a>
-
-</div>
-
-<div class="consultas-sidebar">
-    <h3><i class="fa-solid fa-stethoscope"></i> Consultas</h3>
-    <div class="consulta-item agendada">
-        <div class="consulta-topo">
-            <strong>08:00</strong>
-            <span class="status-badge">Agendada</span>
+            <button class="sair-btn">
+                <i class="fa-solid fa-sign-out-alt"></i>
+                Sair
+            </button>
         </div>
-        <p>Dr. João - Thor</p>
-    </div>
-    <div class="consulta-item andamento">
-        <div class="consulta-topo">
-            <strong>10:30</strong>
-            <span class="status-badge">Em andamento</span>
+
+        <div class="dashboard-layout">
+            <div class="banner">
+
+                <div class="overlay">
+
+                    <h1>Sistema Veterinário</h1>
+
+                    <div>
+
+                        <button type="button" class="btn btn-primary">Adicionar Animal</button>
+
+                        <button type="button" class="btn btn-secondary">Agenda</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <a class="card-link" href="dashboard_animais.html">
+                    <div class="card">
+                        <h3>Animais</h3>
+                        <span>214</span>
+                    </div>
+                </a>
+
+                <a class="card-link" href="agenda.html">
+                    <div class="card">
+                        <h3>Adoções</h3>
+                        <span>35</span>
+                    </div>
+                </a>
+
+                <a class="card-link" href="dashboard_animais.html">
+                    <div class="card">
+                        <h3>Consultas</h3>
+                        <span>12</span>
+                    </div>
+                </a>
+
+                <a class="card-link" href="doacoes.html">
+                    <div class="card">
+                        <h3>Doações</h3>
+                        <span>R$ 8.420</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="consultas-sidebar">
+                <h3><i class="fa-solid fa-stethoscope"></i> Consultas</h3>
+                <div class="consulta-item agendada">
+                    <div class="consulta-topo">
+                        <strong>08:00</strong>
+                        <span class="status-badge">Agendada</span>
+                    </div>
+                    <p>Dr. João - Thor</p>
+                </div>
+                <div class="consulta-item andamento">
+                    <div class="consulta-topo">
+                        <strong>10:30</strong>
+                        <span class="status-badge">Em andamento</span>
+                    </div>
+                    <p>Dra. Ana - Luna</p>
+                </div>
+                <div class="consulta-item finalizada">
+                    <div class="consulta-topo">
+                        <strong>14:00</strong>
+                        <span class="status-badge">Finalizada</span>
+                    </div>
+                    <p>Dr. Pedro - Nina</p>
+                </div>
+            </div>
         </div>
-        <p>Dra. Ana - Luna</p>
-    </div>
-    <div class="consulta-item finalizada">
-        <div class="consulta-topo">
-            <strong>14:00</strong>
-            <span class="status-badge">Finalizada</span>
+
+        <div class="lista">
+
+            <h2>Últimos animais</h2>
+
+            <div class="animal">
+
+                <img
+                    src="https://cdn.jornaldaparaiba.com.br/wp-content/uploads/2024/01/racas-de-cachorro-labrador-retriever.jpg?xid=650493">
+
+                <div>
+
+                    <h3>Thor</h3>
+
+                    <p>Cachorro • Labrador • 4 anos</p>
+
+                </div>
+
+                <div class="estrelas">
+
+                    ★★★★★
+
+                </div>
+
+            </div>
+
         </div>
-        <p>Dr. Pedro - Nina</p>
+
     </div>
-</div>
-</div>
-
-<div class="lista">
-
-<h2>Últimos animais</h2>
-
-<div class="animal">
-
-<img src="https://cdn.jornaldaparaiba.com.br/wp-content/uploads/2024/01/racas-de-cachorro-labrador-retriever.jpg?xid=650493">
-
-<div>
-
-<h3>Thor</h3>
-
-<p>Cachorro • Labrador • 4 anos</p>
-
-</div>
-
-<div class="estrelas">
-
-★★★★★
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 </body>
+
 </html>
