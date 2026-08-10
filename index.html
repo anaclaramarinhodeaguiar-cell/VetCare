@@ -35,33 +35,71 @@
     </div>
   </main>
   <h3>Para saber mais: </h3>
-  <div class="galeria">
-    <img
-      src="https://media.istockphoto.com/id/1625310710/pt/foto/happy-group-of-volunteer-people-stacking-hands-celebrating-together-outdoor-teamwork-and.jpg?s=612x612&w=0&k=20&c=ML_ePG52vnhbusKmSsEVK51CiWQAuJVyKmYiLdyXrw4="
-      alt="Logo do Sistema Voluntários.org">
-    <img
-      src="https://media.istockphoto.com/id/1250060339/pt/foto/dog-shelter.jpg?s=612x612&w=0&k=20&c=sTM1oDq8Dyuv_eEpFs4g-pLNlXKE1jUo7d_zYFqzHQQ="
-      alt="Logo do Sistema Voluntários.org">
-  </div>
-  <div id="sobre_nos">
-    <h3>Sobre Nós</h3>
-    <p>
-      Somos um projeto dedicado a conectar pessoas que desejam fazer a diferença na vida dos animais por meio do
-      voluntariado em uma clínica veterinária. Nossa missão é promover o bem-estar animal, oferecendo apoio às equipes
-      veterinárias e contribuindo para um atendimento mais acolhedor e eficiente.
-      Acreditamos que a solidariedade, o compromisso e o cuidado podem transformar vidas. Por isso, reunimos voluntários
-      dispostos a colaborar em diversas atividades, como organização de campanhas, apoio em eventos de adoção, auxílio
-      no cuidado dos animais em recuperação e ações de conscientização sobre posse responsável e saúde animal.
-      Além de beneficiar os animais, o projeto proporciona uma oportunidade de aprendizado, desenvolvimento pessoal e
-      integração com profissionais da área veterinária, fortalecendo valores como empatia, responsabilidade e trabalho
-      em equipe.
-      Nosso objetivo é construir uma rede de pessoas comprometidas com a causa animal, incentivando a participação da
-      comunidade e criando um ambiente onde cada gesto de cuidado faz a diferença.
-      Junte-se a nós e ajude a oferecer mais qualidade de vida, carinho e esperança para os animais que precisam de
-      atenção e cuidado.
-      Se desejar, posso adaptar o texto para um tom mais institucional, mais inspirador ou mais moderno.
-    </p>
-  </div>
+  <div class="carrossel">
+
+    <button class="carrossel-btn anterior" aria-label="Imagem anterior">
+        &#10094;
+    </button>
+
+    <div class="carrossel-container">
+
+        <div class="slide ativo">
+            <img
+                src="https://media.istockphoto.com/id/1625310710/pt/foto/happy-group-of-volunteer-people-stacking-hands-celebrating-together-outdoor-teamwork-and.jpg?s=612x612&w=0&k=20&c=ML_ePG52vnhbusKmSsEVK51CiWQAuJVyKmYiLdyXrw4="
+                alt="Voluntários trabalhando em equipe">
+
+            <div class="slide-texto">
+                <h3>Voluntariado</h3>
+                <p>
+                    Pessoas unidas para ajudar e transformar vidas.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img
+                src="https://media.istockphoto.com/id/1250060339/pt/foto/dog-shelter.jpg?s=612x612&w=0&k=20&c=sTM1oDq8Dyuv_eEpFs4g-pLNlXKE1jUo7d_zYFqzHQQ="
+                alt="Abrigo de animais">
+
+            <div class="slide-texto">
+                <h3>Causa Animal</h3>
+                <p>
+                    Ajudamos animais que precisam de cuidado e proteção.
+                </p>
+            </div>
+        </div>
+
+        <!-- Você pode adicionar mais slides -->
+
+        <div class="slide">
+            <img
+                src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
+                alt="Atendimento veterinário">
+
+            <div class="slide-texto">
+                <h3>Atendimento</h3>
+                <p>
+                    Apoio e cuidado para melhorar a vida dos animais.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carrossel-btn proximo" aria-label="Próxima imagem">
+        &#10095;
+    </button>
+
+</div>
+
+<div class="indicadores">
+
+    <button class="indicador ativo" aria-label="Slide 1"></button>
+    <button class="indicador" aria-label="Slide 2"></button>
+    <button class="indicador" aria-label="Slide 3"></button>
+
+</div>
+
   <div class="footer">
     <!-- From Uiverse.io by wilsondesouza -->
     <ul class="example-2">
@@ -93,6 +131,7 @@
     </ul>
     <p class="footer-text">© 2024 Voluntários.org. Todos os direitos reservados.</p>
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
