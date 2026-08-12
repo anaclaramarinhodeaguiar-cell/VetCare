@@ -13,98 +13,62 @@
 
   <header class="navbar">
     <div class="logo">Voluntários<span>.org</span></div>
-    <nav class="menu">
-      <a href="index.html" class="active">Início</a>
-      <a href="projetos_pi.html" target="_self" class="botao">Projetos</a>
-      <a href="#sobre_nos" class="botao">Sobre Nós</a>
-      <a href="app/login/login_pi.html" class="btn-login">Entrar</a>
-    </nav>
   </header>
 
-  <main class="hero-container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Mude o mundo através do voluntariado</h1>
-        <p>Conectamos corações dispostos a ajudar com projetos sociais que precisam de apoio. Encontre uma causa que
-          combine com você e faça a diferença hoje mesmo.</p>
-        <div class="hero-buttons">
-          <a href="app/cadastro/cadastro_pi.html" class="btn-primary">Quero Ser Voluntário</a>
-          <a href="#" class="btn-secondary">Conhecer Projetos</a>
+  <main class="hero-slider" aria-label="Carrossel de destaques">
+    <div class="slides">
+      <article class="slide active" style="background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80');">
+        <div class="slide-content">
+          <span>Voluntariado</span>
+          <h1>Mude o mundo através do voluntariado</h1>
+          <p>Conectamos corações dispostos a ajudar com projetos sociais que precisam de apoio.</p>
+          <div class="hero-buttons">
+            <a href="app/cadastro/cadastro_pi.html" class="btn-primary">Quero Ser Voluntário</a>
+            <a href="#" class="btn-secondary">Conhecer Projetos</a>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="slide" style="background-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80');">
+        <div class="slide-content">
+          <span>Projetos</span>
+          <h1>Faça parte de causas que transformam pessoas</h1>
+          <p>Participe de ações reais, humanas e impactantes em comunidades que precisam de apoio.</p>
+          <div class="hero-buttons">
+            <a href="projetos_pi.html" class="btn-primary">Ver Projetos</a>
+            <a href="#sobre_nos" class="btn-secondary">Sobre Nós</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');">
+        <div class="slide-content">
+          <span>Impacto</span>
+          <h1>Seu gesto pode mudar o dia de alguém</h1>
+          <p>Você também pode ser a diferença com tempo, cuidado e empatia em projetos sociais.</p>
+          <div class="hero-buttons">
+            <a href="app/login/login_pi.html" class="btn-primary">Entrar</a>
+            <a href="app/cadastro/cadastro_pi.html" class="btn-secondary">Criar Conta</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+    <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+
+    <div class="dots" aria-label="Indicadores do carrossel">
+      <button class="dot active" aria-label="Ir para slide 1"></button>
+      <button class="dot" aria-label="Ir para slide 2"></button>
+      <button class="dot" aria-label="Ir para slide 3"></button>
     </div>
   </main>
-  <h3>Para saber mais: </h3>
-  <div class="carrossel">
-
-    <button class="carrossel-btn anterior" aria-label="Imagem anterior">
-        &#10094;
-    </button>
-
-    <div class="carrossel-container">
-
-        <div class="slide ativo">
-            <img
-                src="https://media.istockphoto.com/id/1625310710/pt/foto/happy-group-of-volunteer-people-stacking-hands-celebrating-together-outdoor-teamwork-and.jpg?s=612x612&w=0&k=20&c=ML_ePG52vnhbusKmSsEVK51CiWQAuJVyKmYiLdyXrw4="
-                alt="Voluntários trabalhando em equipe">
-
-            <div class="slide-texto">
-                <h3>Voluntariado</h3>
-                <p>
-                    Pessoas unidas para ajudar e transformar vidas.
-                </p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <img
-                src="https://media.istockphoto.com/id/1250060339/pt/foto/dog-shelter.jpg?s=612x612&w=0&k=20&c=sTM1oDq8Dyuv_eEpFs4g-pLNlXKE1jUo7d_zYFqzHQQ="
-                alt="Abrigo de animais">
-
-            <div class="slide-texto">
-                <h3>Causa Animal</h3>
-                <p>
-                    Ajudamos animais que precisam de cuidado e proteção.
-                </p>
-            </div>
-        </div>
-
-        <!-- Você pode adicionar mais slides -->
-
-        <div class="slide">
-            <img
-                src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
-                alt="Atendimento veterinário">
-
-            <div class="slide-texto">
-                <h3>Atendimento</h3>
-                <p>
-                    Apoio e cuidado para melhorar a vida dos animais.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <button class="carrossel-btn proximo" aria-label="Próxima imagem">
-        &#10095;
-    </button>
-
-</div>
-
-<div class="indicadores">
-
-    <button class="indicador ativo" aria-label="Slide 1"></button>
-    <button class="indicador" aria-label="Slide 2"></button>
-    <button class="indicador" aria-label="Slide 3"></button>
-
-</div>
 
   <div class="footer">
     <!-- From Uiverse.io by wilsondesouza -->
     <ul class="example-2">
       <li class="icon-content">
-        <a href="https://whatsapp.com/" aria-label="WhatsApp" data-social="whatsapp">
+        <a :hover href="https://whatsapp.com/" aria-label="WhatsApp" data-social="whatsapp">
           <div class="filled"></div>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
             viewBox="0 0 25 25" xml:space="preserve">
@@ -114,7 +78,6 @@
           </svg>
         </a>
         <div class="tooltip">WhatsApp</div>
-        Para Contato Pessoal Com O Seu Tutor: +51 (91) 99999-9999
       </li>
       <li class="icon-content">
         <a href="https://www.instagram.com/" aria-label="Instagram" data-social="instagram">

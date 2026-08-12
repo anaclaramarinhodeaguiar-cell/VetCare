@@ -1,77 +1,58 @@
-    const slides = document.querySelectorAll('.slide');
-    const indicadores = document.querySelectorAll('.indicador');
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 
-    const anterior = document.querySelector('.anterior');
-    const proximo = document.querySelector('.proximo');
+let currentSlide = 0;
+let autoPlay = null;
 
-    let slideAtual = 0;
+function showSlide(index) {
+  if (!slides.length) return;
 
+  currentSlide = (index + slides.length) % slides.length;
 
-    function mostrarSlide(numero) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === currentSlide);
+  });
 
-        // Remove o slide ativo
-        slides.forEach(slide => {
-            slide.classList.remove('ativo');
-        });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
+}
 
-        // Remove indicador ativo
-        indicadores.forEach(indicador => {
-            indicador.classList.remove('ativo');
-        });
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
 
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
 
-        // Ativa o novo slide
-        slides[numero].classList.add('ativo');
+function startAutoPlay() {
+  autoPlay = setInterval(nextSlide, 5000);
+}
 
-        indicadores[numero].classList.add('ativo');
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    clearInterval(autoPlay);
+    startAutoPlay();
+  });
 
-        slideAtual = numero;
-    }
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    clearInterval(autoPlay);
+    startAutoPlay();
+  });
+}
 
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    showSlide(index);
+    clearInterval(autoPlay);
+    startAutoPlay();
+  });
+});
 
-    function proximoSlide() {
-
-        slideAtual++;
-
-        if (slideAtual >= slides.length) {
-            slideAtual = 0;
-        }
-
-        mostrarSlide(slideAtual);
-    }
-
-
-    function slideAnterior() {
-
-        slideAtual--;
-
-        if (slideAtual < 0) {
-            slideAtual = slides.length - 1;
-        }
-
-        mostrarSlide(slideAtual);
-    }
-
-
-    // Botão próximo
-    proximo.addEventListener('click', proximoSlide);
-
-
-    // Botão anterior
-    anterior.addEventListener('click', slideAnterior);
-
-
-    // Indicadores
-    indicadores.forEach((indicador, indice) => {
-
-        indicador.addEventListener('click', () => {
-
-            mostrarSlide(indice);
-
-        });
-
-    });
-
-
-    // Troca automática a cada 5 segundos
-    setInterval(proximoSlide, 5000);
+showSlide(0);
+startAutoPlay();

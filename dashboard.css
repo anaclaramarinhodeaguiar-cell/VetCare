@@ -40,6 +40,7 @@ font-weight: bold;
 .sidebar ul{
 
 list-style:none;
+padding:0;
 
 }
 
@@ -179,6 +180,8 @@ flex-direction:column;
 justify-content:flex-end;
 
 }
+
+
 
 .overlay-btn{
 
