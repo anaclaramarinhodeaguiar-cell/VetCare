@@ -7,20 +7,19 @@
 }
 
 body {
-    /* Define uma máscara clara sobre a imagem para dar contraste ao texto */
-    background-image: linear-gradient(rgba(243, 247, 245, 0.85), rgba(243, 247, 245, 0.85)), 
-                     url("https://i.postimg.cc/qv1prB0L/Chat-GPT-Image-17-de-jul-de-2026-16-48-15.png");
-    
-    background-size: cover;          /* Faz a imagem cobrir a tela inteira */
-    background-position: center;     /* Centraliza o desenho */
-    background-repeat: no-repeat;    /* Impede que o padrão se repita */
-    background-attachment: fixed;    /* Deixa o fundo fixo ao rolar a página */
-    background-color: #f3f7f5;       /* Fundo reserva caso a imagem falhe */
-    
-    color: #2c3e35;
-    min-height: 100vh;
+    background-color: #f3f7f5;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(243, 247, 245, 0.85), rgba(243, 247, 245, 0.85)),;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f3f7f5;
+    color: #2c3e35;
 }
 
 /* --- BARRA DE NAVEGAÇÃO --- */
@@ -28,10 +27,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 20px 8%;
     background-color: rgba(255, 255, 255, 0.95); /* Leve transparência no menu */
     box-shadow: 0 4px 15px rgba(160, 180, 170, 0.1);
     z-index: 10;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -76,6 +78,20 @@ body {
     color: #ffffff;
 }
 
+.menu .btn-secondary {
+    border: 1.5px solid #006b59;
+    color: #006b59;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.menu .btn-secondary:hover {
+    background-color: #006b59;
+    color: #ffffff;
+}
+
+/* --- SEÇÃO HERO --- */
 .hero-slider {
     position: relative;
     width: 100%;
@@ -168,7 +184,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 52px;
-    padding: 14px 28px;
+    width: 100%;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
@@ -428,5 +444,171 @@ ul {
 
     .slide-texto p {
         font-size: 14px;
+    }
+}
+
+/* =================== 
+   SEÇÃO SOBRE NÓS
+    =================== */
+.about-section {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f3f7f5 0%, #e8f3f0 100%);
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e35;
+    margin-bottom: 16px;
+}
+
+.about-header p {
+    font-size: 18px;
+    color: #7a8b82;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(60, 174, 163, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(60, 174, 163, 0.15);
+    border-color: #3caea3;
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.about-card h3 {
+    font-size: 22px;
+    color: #2c3e35;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.about-card p {
+    font-size: 15px;
+    color: #7a8b82;
+    line-height: 1.6;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+    padding: 60px 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(60, 174, 163, 0.08);
+    text-align: center;
+}
+
+.stat h4 {
+    font-size: 48px;
+    color: #3caea3;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #7a8b82;
+    font-weight: 500;
+}
+
+.about-cta {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #3caea3 0%, #2f948a 100%);
+    border-radius: 16px;
+    color: #ffffff;
+}
+
+.about-cta h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #ffffff;
+    color: #3caea3;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-header h2 {
+        font-size: 32px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .stat h4 {
+        font-size: 36px;
+    }
+
+    .about-cta {
+        padding: 40px 20px;
+    }
+
+    .about-cta h3 {
+        font-size: 24px;
     }
 }
