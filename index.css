@@ -56,7 +56,7 @@ body {
     text-decoration: none;
     color: #7a8b82;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
@@ -64,7 +64,7 @@ body {
     color: #3caea3;
 }
 
-.menu .btn-login {
+.menu .btn-login  {
     border: 1.5px solid #3caea3;
     color: #3caea3;
     padding: 8px 20px;
@@ -78,16 +78,15 @@ body {
     color: #ffffff;
 }
 
-.menu .btn-secondary {
-    border: 1.5px solid #006b59;
-    color: #006b59;
+.menu .btn-secondary {border: 1.5px solid #3caea3;
+    color: #3caea3;
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
 .menu .btn-secondary:hover {
-    background-color: #006b59;
+    background-color: #3caea3;
     color: #ffffff;
 }
 
@@ -183,8 +182,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 52px;
-    width: 100%;
+    
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
@@ -611,4 +609,71 @@ ul {
     .about-cta h3 {
         font-size: 24px;
     }
+}
+
+.about-cta {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #3caea3 0%, #2f948a 100%);
+    border-radius: 20px;
+    color: #fff;
+}
+
+.cta-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-cta h3 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.about-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    background: #fff;
+    color: #3caea3;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+}
+
+.btn-cta-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-cta-secondary:hover {
+    background: rgba(255,255,255,0.15);
 }
