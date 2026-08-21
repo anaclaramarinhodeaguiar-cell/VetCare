@@ -94,10 +94,11 @@ body {
 .hero-slider {
     position: relative;
     width: 100%;
-    height: calc(100vh - 82px);
+    height: calc(90vh - 82px);
     min-height: 540px;
     overflow: hidden;
     background: #111;
+
 }
 
 .slides {
@@ -183,6 +184,7 @@ body {
     align-items: center;
     justify-content: center;
     
+    padding: 10px 30px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
